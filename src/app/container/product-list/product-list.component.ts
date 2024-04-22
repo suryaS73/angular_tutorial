@@ -534,4 +534,13 @@ export class ProductListComponent {
     }
   ];
 
+  inStock:number=this.products.filter(p=> p.is_in_inventory===true).length;
+
+  outOfStock:number=this.products.filter(p=> p.is_in_inventory===false).length;
+
+  selectedFilterRadioButton: string='all';
+
+  onFilterChange(event:string){
+    this.selectedFilterRadioButton=event;
+  }
 }
