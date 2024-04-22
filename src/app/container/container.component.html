@@ -1,0 +1,22 @@
+<div class="ekart--product-container">
+  <!--  <img [src]="product.pImage" alt="No Img Found">//property binding
+    <p>Name : {{product.name}}</p>//String interpolation (oneway binding component to view)
+    <p>Price : {{product.price}}</p>
+    <p>Color : {{product.color}}</p>
+    <p>Discounted price : {{ getDiscountedPrice().toFixed(2) }}</p>
+    <p style="color: red;">{{product.inStock > 0 ? '*Only ' + product.inStock + ' Left*' : '*Out of stock*'}}</p>
+    <button class="btn btn-primary" (click)="decrementCartValue()" [disabled]="(product.inStock == 0 || addToCart==0)">-</button>//event binding (one way binding view to component)
+    <span>{{ addToCart}}</span>
+    <button class="btn btn-primary" (click)="incrementCartValue()" [disabled]="(product.inStock == 0 || addToCart>=product.inStock)">+</button>
+    <br>
+    <button type="button" [disabled]="!(product.inStock > 0)"  class="btn btn-primary">Buy Now</button>
+     <input  (keyup)="onNameChange($event)"><br>  bind-value="name" we can aslo use 'bind-' instead of []
+    <p>Name : {{name}}</p> event binding-->
+
+    <app-search></app-search>
+    <!-- <div *ngFor="let item of listOfString">
+      <p>Current element of array is {{item}}</p>
+    </div> -->
+    <product-list></product-list>
+    
+</div>
