@@ -13,10 +13,11 @@
      <input  (keyup)="onNameChange($event)"><br>  bind-value="name" we can aslo use 'bind-' instead of []
     <p>Name : {{name}}</p> event binding-->
 
-    <app-search></app-search>
+    <app-search (SearchTextChange)="setSearchText($event)"></app-search>
     <!-- <div *ngFor="let item of listOfString">
       <p>Current element of array is {{item}}</p>
     </div> -->
-    <product-list></product-list>
+    <product-list [searchText]="searchText" #productListComp></product-list>
+    <product-details *ngIf="productListComp.selectedProduct" [productListComp]="productListComponentProperty"></product-details>
     
 </div>
